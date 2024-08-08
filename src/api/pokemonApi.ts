@@ -2,7 +2,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { PokemonApiResponse } from "../interfaces/Pokemon";
 
-const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URLl;
+const baseUrl =
+  process.env.NEXT_PUBLIC_API_BASE_URLl ??
+  "https://pokedex-server-1.onrender.com/api";
 
 export const pokemonApi = createApi({
   reducerPath: "pokemonApi",
