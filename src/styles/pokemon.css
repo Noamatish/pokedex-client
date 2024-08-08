@@ -1,0 +1,193 @@
+/* styles/pokemon.css */
+
+.pokemon-grid {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: calc(100vh - 64px);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pokemon-card {
+  max-width: 350px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, background-color 0.3s, color 0.3s,
+    border-color 0.3s !important;
+  border-radius: 8px;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color);
+}
+
+.pokemon-card div {
+  color: var(--text-color) !important;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05) !important;
+}
+
+.pokemon-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 5px;
+}
+
+.pokemon-card-content {
+  padding: 16px;
+}
+
+.pokemon-card-title {
+  font-size: 1em !important;
+  margin-bottom: 8px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-color);
+}
+
+.pokemon-card-subtitle {
+  color: var(--text-color) !important;
+  margin-bottom: 16px;
+  font-size: 0.8em;
+}
+
+.button-capture {
+  width: 100%;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid var(--input-border-color);
+  margin-top: 20px !important;
+}
+
+.button-capture:disabled {
+  color: var(--button-text-color) !important;
+}
+
+.button-capture:hover {
+  opacity: 0.8;
+  background-color: lighten(var(--button-background-color), 10%);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.pagination-controls .MuiPaginationItem-root {
+  color: var(--text-color);
+}
+
+.pagination-controls .MuiPaginationItem-root.Mui-selected {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+}
+
+.pagination-controls .MuiPaginationItem-root.Mui-selected:hover {
+  background-color: lighten(var(--button-background-color), 10%);
+}
+
+.pagination-controls .MuiPaginationItem-root:hover {
+  background-color: lighten(var(--button-background-color), 10%);
+}
+
+.pagination-controls .MuiPaginationItem-root.Mui-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-controls .Mui-selected {
+  color: lighten(var(--button-background-color), 10%) !important;
+}
+
+.pagination-button:disabled {
+  color: var(--button-text-color);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-text {
+  margin: 0 10px;
+  color: var(--text-color);
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: var(--text-color);
+}
+
+.filter-controls .MuiFormControl-root {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.filter-controls .MuiInputBase-root,
+.MuiOutlinedInput-root {
+  background-color: var(--input-background-color);
+  color: var(--input-text-color);
+}
+
+.filter-controls .MuiInputLabel-root,
+.MuiOutlinedInput-root,
+.MuiInputBase-input,
+.MuiFormLabel-root {
+  color: var(--input-text-color) !important;
+}
+
+.filter-controls .MuiOutlinedInput-notchedOutline {
+  border-color: var(--input-border-color);
+}
+
+.filter-controls .MuiSelect-icon {
+  color: var(--input-text-color);
+}
+
+@media screen and (max-width: 600px) {
+  .pokemon-card-title {
+    font-size: 0.9em !important;
+  }
+  .pokemon-card-subtitle {
+    font-size: 0.7em !important;
+  }
+
+  .filter-controls .MuiInputLabel-root,
+  .MuiOutlinedInput-root,
+  .MuiInputBase-input,
+  .MuiFormLabel-root {
+    font-size: 0.8em !important;
+  }
+
+  .pokemon-grid {
+    max-width: unset;
+  }
+  .pokemon-card {
+    width: 300px;
+    margin: 20px auto;
+  }
+}

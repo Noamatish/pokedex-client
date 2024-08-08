@@ -1,0 +1,132 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --navbar-background-color: #1976d2;
+  --navbar-text-color: #ffffff;
+  --input-background-color: #ffffff;
+  --input-text-color: #000000;
+  --input-border-color: #cccccc;
+  --button-background-color: #1976d2;
+  --button-text-color: #ffffff;
+  --tooltip-background-color: #555555;
+  --tooltip-text-color: #ffffff;
+  --border-color: #e0e0e0; /* Default light mode border color */
+  --toggle-bg-color: #000;
+  --toggle-color: #ffffff;
+}
+
+.dark-theme {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --navbar-background-color: #1e1e1e;
+  --navbar-text-color: #ffffff;
+  --input-background-color: #4b4b4b;
+  --input-text-color: #ffffff;
+  --input-border-color: #777777;
+  --button-background-color: #555555;
+  --button-text-color: #555555;
+  --tooltip-background-color: #777777;
+  --tooltip-text-color: #ffffff;
+  --border-color: #333333; /* Dark mode border color */
+
+  --toggle-bg-color: #000000a8;
+  --toggle-color: #ffffffdb;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+  background-color: var(--navbar-background-color);
+  color: var(--navbar-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.MuiSwitch-thumb {
+  color: var(--toggle-color);
+}
+
+.MuiSwitch-track {
+  background-color: var(--toggle-bg-color) !important;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: calc(100vh - 64px);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filters {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.pokemon-grid {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button,
+input,
+select,
+div,
+span,
+fieldset,
+label,
+input::placeholder {
+  font-family: "Press Start 2P", sans-serif !important;
+}
+
+button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+input,
+select {
+  background-color: var(--input-background-color);
+  color: var(--input-text-color);
+  border: 1px solid var(--input-border-color);
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .filters {
+    width: 300px;
+  }
+}
