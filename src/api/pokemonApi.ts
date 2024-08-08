@@ -2,9 +2,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { PokemonApiResponse } from "../interfaces/Pokemon";
 
+const baseUrl =
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://127.0.0.1:8080/api";
+
 export const pokemonApi = createApi({
   reducerPath: "pokemonApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://127.0.0.1:8080/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getPokemon: builder.query<
       PokemonApiResponse,
