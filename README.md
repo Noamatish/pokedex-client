@@ -18,7 +18,7 @@ This is the frontend application for the Pokédex project, implemented using Rea
 1. Clone the repository:
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Noamatish/pokedex-client.git
    ```
 
 2. Navigate to the project directory:
@@ -27,8 +27,7 @@ This is the frontend application for the Pokédex project, implemented using Rea
    cd pokedex-frontend
    ```
 
-````
 3. Running the Application
- ```bash
- npm start
-````
+    ```bash
+    npm start
+    ````
