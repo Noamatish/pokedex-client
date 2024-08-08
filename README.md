@@ -1,4 +1,4 @@
-# Pokédex Frontend
+# Pokédex client
 
 This is the frontend application for the Pokédex project, implemented using React and TypeScript.
 
@@ -24,10 +24,10 @@ This is the frontend application for the Pokédex project, implemented using Rea
 2. Navigate to the project directory:
 
    ```bash
-   cd pokedex-frontend
+   cd pokedex-client
    ```
 
 3. Running the Application
-    ```bash
-    npm start
-    ````
+   ```bash
+   npm start
+   ```
